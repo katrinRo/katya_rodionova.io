@@ -1,0 +1,102 @@
+@mixin reg 
+	font-family: 'Museo Sans Light',sant-serif
+	font-weight: 300
+
+
+@mixin bold 
+	font-family: 'Museo Sans Bold',sant-serif;
+	font-weight: 700
+*
+	box-sizing: border-box
+body
+	+reg
+
+img
+	max-width: 100%
+.container
+	width: 1170px
+	margin: auto
+@media (max-width: 1200px)
+	.container
+		width: 960px
+@media (max-width: 992px)
+	.container 
+		max-width: 860px
+		width: 90%
+		.input-group__item,.input-group__mod
+
+			width: 100%
+
+// @media (max-width: 768px)
+// 	.container
+// 		max-width: 540px
+// 		width: 85%
+@media (max-width: 768px)
+	max-width: 540px
+	width: 85%
+
+.btn
+	border-radius: 10px
+	background-color: $main-color
+	outline: none
+	padding: 17px 28px
+	border: none
+	font-weight: 600
+	cursor: pointer
+	+bold
+	&:hover
+		background-color: lighten($main-color, 20%)
+		cursor: pointer
+		transition: 0.2s
+
+.section
+	padding: 62px 0
+	&-title
+		font-size: 24px
+		line-height: 35px
+		+bold
+		text-align: center
+	&-subtitle
+		display: block
+		font-size: 16px
+
+input
+	border: 1px solid $border-input
+	padding: 23px 26px
+	font-size: 15px
+	border-radius: 10px
+	outline: none
+	&:focus
+		border: 1px solid $main-color
+.input	
+	&-group
+		position: relative
+
+a
+	display: block
+	color: $text-color
+	text-decoration: none
+
+.arrows
+	&__left, &__right
+		&:hover
+			cursor: pointer
+.invalid
+	border: 1px solid red
+em.invalid
+	border: 0
+	color: red
+	position: absolute
+	left: 50%
+	top: 28%
+
+
+.info
+	background-color: $main-color
+	padding: 87px 0 94px 0
+	&__title
+		font-size: 32px
+		line-height: 50px
+		max-width: 920px
+		margin: auto
+		+reg

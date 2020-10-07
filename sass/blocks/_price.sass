@@ -1,0 +1,100 @@
+.price
+	padding: 90px 0 80px 0
+	&__title
+		max-width: 515px
+		font-size: 30px
+		line-height: 45px
+		margin: 0 auto
+		margin-bottom: 50px
+
+	&__subtitle
+		text-align: center
+		margin-bottom: 58px
+		font-size: 20px
+	&__card
+		margin-bottom: 30px
+.card
+	text-align: center
+	border: 1px solid #e8e8e8
+
+	&:hover
+		box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+		transition: 0.2s
+		.card__image:before
+			opacity: 1
+	&__text
+		padding: 38px 0 43px
+	&__title
+		margin-top: 0
+		font-size: 18px
+	&__image
+		position: relative
+		
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+			opacity: 0
+			transition: 0.2s
+
+	&__link
+		font-size: 16px
+		+bold
+		display: inline-block
+		position: relative
+		margin-top: 4px
+		&:hover
+			&:after
+				height: 12px
+				
+
+		&:after
+			content: ''
+			position: absolute
+			z-index: -1
+			bottom: -4px
+			left: 0
+			display: block
+			width: 100%
+			height: 3px
+			background-color: $main-color
+			transition: 0.2s
+	&s
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+.card img
+	display: block
+
+@media (max-width: 826px)
+
+	.card
+		&__image img
+			width: 271px
+		&__text
+			padding: 30px 0 31px
+		&__title
+			font-size: 14px
+			margin-bottom: 7px
+			margin-left: -2px
+		&__link
+			margin-left: -6px
+			color: $text-color
+		&s
+			justify-content: center
+
+	.price
+		padding: 51px 0 20px 0
+		&__title
+			font-size: 18px
+			line-height: 20px
+			margin-bottom: 27px
+		&__subtitle
+			font-size: 14px
+			+bold
+			margin-left: -18px
+			margin-bottom: 60px

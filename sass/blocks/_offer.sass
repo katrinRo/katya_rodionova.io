@@ -1,0 +1,119 @@
+.offer
+	background: url("../img/offer-bg.jpg") no-repeat center right
+	background-size: contain
+	position: relative
+	&.section
+		padding-bottom: 85px
+	&:before
+		content: ''
+		width: 50%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #fff
+	&-block
+		width: 50%
+		padding-right: 90px
+		position: relative
+
+	&__title
+		max-width: 360px
+		margin-bottom: 19px
+		text-align: left
+	&__subtitle
+		margin-bottom: 30px
+		max-width: 320px
+	&__input
+		width: 240px
+		margin-bottom: 15px
+		&:first-child
+			margin-right: 7px
+
+	&__btn
+		width: 100%
+		padding-top: 27px
+		padding-bottom: 27px
+		margin-top: 15px
+		
+	&__content
+		display: flex
+		align-items: center
+		margin-top: 26px
+		font-size: 15px
+		line-height: 24px
+	&__info
+		max-width: 225px
+		margin-right: 72px
+	&__cotacts
+		margin-top: -2px
+	&__tel
+		
+		+bold
+.input
+	&-group__mod
+			display: inline-block
+			width: 245px
+
+
+@media (max-width: 1200px)
+	.offer
+		background-size: cover
+		&__input
+			width: 100%
+			margin-bottom: 10px
+		&__btn
+			width: 100%
+			font-size: 10px
+
+@media (max-width: 768px)
+	.offer
+		padding: 35px 0 20px 0
+		background: #fff
+		margin-left: 2px
+		&.section
+			padding-bottom: 60px
+
+		&-block
+			width: 100%
+			padding-right: 0
+			// position: relative
+		&__title
+			max-width: 260px
+			font-size: 18px
+			line-height: 22px
+
+		&__subtitle
+			font-size: 14px
+			margin-bottom: 27px
+
+		&__input
+			width: 100%
+			margin-bottom: 8px
+			
+		&__btn
+			width: 100%
+			font-size: 14px
+			padding: 20px 47px 20px 45px
+			margin-bottom: 23px
+			margin-top: -1px
+
+		&__content
+			display: block
+			margin-top: -2px
+			margin-left: 5px
+		&__info
+			max-width: 230px
+			margin-right: 0
+			margin-bottom: 6px
+.oferErorr
+	border: 1px solid red
+
+
+em.oferErorr
+	top: 50%
+	left: 11%
+	border: 0
+	color: red
+	position: absolute
+	font-size: 12px
